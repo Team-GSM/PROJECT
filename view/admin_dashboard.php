@@ -1,5 +1,6 @@
 <?php
-		
+		include '../model/connection.php';
+
 		session_start();
 		 if (!isset($_SESSION['id'])) {
      			
@@ -137,6 +138,7 @@
 			</div>
 		</div>
 
+
 		<div class="container-fluid" style="margin-top: 2%; border-top: 1px ridge lightgrey">
 			<div class="row">
 				<div class="col-sm-3" style="margin-top: 2%; border: 1px solid lightgrey; margin-left: 6%; border-radius: 5px; height: 150px;">
@@ -155,36 +157,55 @@
 			</div>
 		</div>
 
+		
+
 		<div class="container-fluid" style="margin-top: 4%;">
 			<div class="row">
 				<div class="col-sm-11" style="margin:auto;">
 
-					<table>
-						<thead class="text-center">
-							<tr>
-								<th>Student's Name</th>
-								<th>Student's ID</th>
-								<th>Daily Fare</th>
-								<th>Municipality</th>
-								<th>Education</th>
-								<th>No. of Days Presents</th>
-								<th>Allowance</th>
-								
-							</tr>
+						<table>
+
+							<thead class='text-center'>
+										<tr>
+											<th>Student ID</th>
+											<th>Student Name</th>
+											<th>Student Daily Fare</th>
+											<th>Student Address</th>
+											<th>Student Mobile/Telephone Number</th>
+											<th>Student Age</th>
+											<th>Student Status</th>
+											
+										</tr>
 						</thead>
-						<tbody class="text-center">
-								<tr>
-									<td>James Ried</td>
-									<td>009911</td>
-									<td>100</td>
-									<td>Mayorga</td>
-									<td>Senior High Graduate</td>
-									<td>15</td>
-									<td>1300</td>
-								</tr>
-						</tbody>
-					</table>
-					
+						<?php
+							$sql ="SELECT * FROM micp_students_profile";
+							$result = mysqli_query($conn, $sql);
+							$ResultCheck = mysqli_num_rows($result);
+
+
+							if ($ResultCheck > 0) {
+
+									while ($row = mysqli_fetch_assoc($result)) {
+										echo "		
+									
+									<tbody class='text-center'>
+											<tr>
+												<td>".$row['micp_id']."</td>
+												<td>".$row['micp_firstname']." ".$row['micp_surname']."</td>
+												<td>".$row['daily_Fare']."</td>
+												<td>".$row['micp_address']."</td>
+												<td>".$row['micp_mblnumber']." / ".$row['micp_telnumber']."</td>
+												<td>".$row['micp_age']."</td>
+												<td>".$row['micp_status']."</td>
+											</tr>
+									</tbody>";
+									}
+							}else{
+
+								echo "<p class='alert alert-danger text-center'>NO DATA STORED</p>";
+							}
+						?>
+						</table>
 				</div>
 				
 			</div>

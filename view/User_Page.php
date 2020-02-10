@@ -102,19 +102,16 @@
 			        
 			     	
 			        <?php
-
 			       			include 'time.php';
 			        ?>
 				<div class="Attendace-form-container" style="width: 100%; margin-bottom: 10%; ">
 
-					<form action="../model/Attendance.php" method="POST">
-					<input type="number" name="student-id" placeholder="Enter Student ID" class="form-control" style="width: 100%;" id="student-id-input">
-					  
+				
 			        <!-- DISPLAYS TIME ACCORDING TO TIME STATE -->
 			        <?php
 			       			include 'attendanceButtons.php';
 			        ?>
-			        </form>
+			
 					
 					<a href="form.php?btn=Clicked" id="Create-profile-btn" class="btn" style="margin-top: 2%; border: 1px solid #17a2b8; color: #007bff;">Create Profile?</a>
           <a href="#" id="Create-profile-btn" class="btn" style="margin-top: 2%; border: 1px solid #17a2b8; color: #007bff; float: right;">Forget Student Id?</a>
