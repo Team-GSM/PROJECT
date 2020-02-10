@@ -1,0 +1,103 @@
+body{
+
+	background-color: #f2f2f2;
+}
+.header{
+
+	padding: 1%;
+	background: #007bff;
+}
+.header h1{
+
+	color: white;
+}
+.user-form{
+
+	margin-top: 5%;
+}
+
+.signup-form-container{
+
+
+	height: auto;
+	padding: 5px 4px 5px 4px;
+
+}
+.signup-form-container form input{
+
+	margin-left: 13%;
+	width: 75%;
+
+}
+
+.signup-form-container form button{
+
+	margin: 2%;
+	width: 75%;
+
+}
+
+
+.login-form-container{
+	
+	height: auto;
+	padding: 5px 4px 5px 4px;
+
+}
+
+.login-form-container form input{
+
+	margin-left: 13%;
+	width: 75%;
+
+}
+
+.login-form-container form button{
+
+	margin: 2%;
+	width: 75%;
+
+}
+
+.username-label{
+		position: absolute;
+		color: #6c757d;
+		left: 15%; 
+		margin-top: 1%;
+
+	}
+
+	.email-label{
+		position: absolute;
+		left: 15%;  
+		margin-top: 1%;
+		color: #6c757d;
+	}
+
+	.password-label{
+		position: absolute;
+		left: 15%; 
+		margin-top: 1%;
+		color: #6c757d;
+	}
+
+	.Cpassword-label{
+		position: absolute;
+		left: 15%; 
+		margin-top: 1%;
+		color: #6c757d;
+	}
+
+	.l-email-label{
+		position: absolute;
+		left: 15%;  
+		margin-top: 1%;
+		color: #6c757d;
+	}
+	.l-password-label{
+		position: absolute;
+		left: 15%; 
+		margin-top: 1%;
+		color: #6c757d;
+	}
+
