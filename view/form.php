@@ -397,44 +397,12 @@
 
 
 </div>
+
+
+
+
   
 
-<script type="text/javascript">
-
-    //LIMITS THE CHECKED RADIO BUTTON
-    function Yes_clicked() {
-      document.getElementById("no").checked = false;
-    }
-    function No_clicked() {
-      document.getElementById("yes").checked = false;
-    }
-    function CriminalTrue(){
-      document.getElementById("false").checked = false;
-    }
-    function CriminalFalse(){
-      document.getElementById("true").checked = false;
-    }
-    function AdminOff_True(){
-      document.getElementById("Offense_False").checked = false;
-    }
-    function AdminOff_False(){
-      document.getElementById("Offense_True").checked = false;
-    }
-     function Pending_True(){
-      document.getElementById("PendingShclr_False").checked = false;
-    }
-    function Pending_False(){
-      document.getElementById("PendingShclr_True").checked = false;
-    }
-
-   
-  
-</script>
-  
-
-  <?php
-
-  ?>
 
 </body>
 </html>
